@@ -25,11 +25,18 @@ compile '/images/*/' do
   # don't filter or layout
 end
 
+compile '/pages/*/' do
+  filter :haml
+  layout 'page'
+  layout 'default'
+end
+
 compile '*' do
   if item.binary?
     # don’t filter binary items
   else
     filter :haml
+    layout 'home'
     layout 'default'
   end
 end
@@ -43,6 +50,10 @@ route '/js/*/' do
 end
 
 route '/images/*/' do
+  item.identifier.chop + '.' + item[:extension]
+end
+
+route '/pages/*/' do
   item.identifier.chop + '.' + item[:extension]
 end
 
