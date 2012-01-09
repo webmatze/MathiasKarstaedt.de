@@ -39,21 +39,57 @@
 	= yield 
 
 	#footer-container
-		%footer(class="wrapper")
-			%nav
-				%ul
-					%li
-						%a(href="/") Startseite
-					%li 
-						%a(href="/pages/angebot.html") Angebot
-					%li 
-						%a(href="/pages/portfolio.html") Portfolio
-					%li 
-						%a(href="/pages/about.html") Über mich
-					%li 
-						%a(href="/pages/kontakt.html") Kontakt
-					%li 
-						%a(href="/pages/impressum.html") Impressum
+		%footer(class="wrapper clearfix")
+			.left
+				%h3 Navigation
+				%nav
+					%ul
+						%li
+							%a(href="/") Startseite
+						%li 
+							%a(href="/pages/angebot.html") Angebot
+						%li 
+							%a(href="/pages/portfolio.html") Portfolio
+						%li 
+							%a(href="/pages/about.html") Über mich
+						%li 
+							%a(href="/pages/kontakt.html") Kontakt
+						%li 
+							%a(href="/pages/impressum.html") Impressum
+			.middle
+				%h3 Social Media
+				%nav
+					%ul
+						%li
+							%a(href="http://www.facebook.com/webmatze") Facebook
+						%li
+							%a(href="http://www.twitter.com/webmatze") Twitter
+						%li
+							%a(href="http://www.linkedin.com/pub/mathias-karst%C3%A4dt/26/a3b/41a") Linked In
+						%li
+							%a(href="https://www.xing.com/profile/Mathias_Karstaedt") Xing
+						%li
+							%a(href="http://github.com/webmatze") Github
+						%li
+							%a(href="http://workingwithrails.com/person/8670-mathias-karst-dt") Working With Rails
+			.right
+				%h3 Kontakt
+				%address(class="vcard")
+					%div(class="fn") Mathias Karstädt
+					%div(class="adr")
+						%span(class="street-address") Schillerstraße 35
+						%br
+						%span(class="postal-code") 22767
+						%span(class="locality") Hamburg
+					%div
+						%br
+					%div
+						%span(class="mail")
+							%a(href="mailto:mathias.karstaedt@gmail.com") mathias.karstaedt@gmail.com
+						%br
+						%span(class="tel") +49 (0)40 67 30 90 98
+
+				
 	#last-container
 		%footer(class="wrapper") 
 			%p Copyright &copy; 2011 by Mathias Karstädt. All rights reserved.

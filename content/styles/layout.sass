@@ -79,8 +79,7 @@ body
 	span 
 		font-size: 1.5em
 		line-height: 1.5em
-	strong,
-	small
+	strong
 		color: $highlightcolor
 	small
 		font-size: .8em
@@ -116,12 +115,13 @@ header
 	nav a:hover
 		text-decoration: underline
 
-footer nav 
-	a, a:visited
-		color: white
-		text-decoration: none
-	a:hover
-		color: $highlightcolor
+footer
+	nav, address
+		a, a:visited
+			color: white
+			text-decoration: none
+		a:hover
+			color: $highlightcolor
 		
 // ==============
 // MOBILE: Main
@@ -175,13 +175,17 @@ footer nav
 	section .more a:hover
 		text-shadow: black 1px 1px 0px
 
-
 #teaser-container header,
 #footer-container footer
 	color: white
 	padding: 20px 0
 	font-size: 1em
 	line-height: 1.4em
+
+#footer-container footer
+	font-size: .8em
+	a, a:visited
+		text-decoration: underline
 
 #teaser-container header #contactme
 	color: $highlightcolor
@@ -289,6 +293,16 @@ footer nav
 	#teaser-container header
 		font-size: 1.2em
 		line-height: 1.5em
+		
+	#footer-container footer
+		font-size: .8em
+		.left,
+		.middle,
+		.right
+			float: left
+			width: 32%
+		h3
+			margin-top: 0px
 
 @media only screen and (min-width: 850px)
 
@@ -369,6 +383,9 @@ footer nav
 	#teaser-container header
 		font-size: 1.4em
 		line-height: 1.5em
+
+	#footer-container footer
+		font-size: 1em
 
 @media only screen and (min-width: 1140px)
 
