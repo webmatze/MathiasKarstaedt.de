@@ -1,4 +1,4 @@
-// SASS Mixins
+// SASS Mixins and Variables
 
 @mixin transform($transformation)
 	-moz-transform: $transformation
@@ -6,6 +6,26 @@
 	-o-transform: $transformation
 	-ms-transform: $transformation
 	transform: $transformation
+	
+@mixin box-shadow($xoff, $yoff, $blur, $color)
+	-webkit-box-shadow: $xoff $yoff $blur $color
+	-moz-box-shadow: $xoff $yoff $blur $color
+	-o-box-shadow: $xoff $yoff $blur $color
+	-ms-box-shadow: $xoff $yoff $blur $color
+	box-shadow: $xoff $yoff $blur $color
+	
+@mixin transition($property, $duration)
+	-webkit-transition-property: $property
+	-moz-transition-property: $property
+	-o-transition-property: $property
+	transition-property: $property
+	-webkit-transition-duration: $duration
+	-moz-transition-duration: $duration
+	-o-transition-duration: $duration
+	transition-duration: $duration
+	
+$highlightcolor: red 
+//rgb(241, 101, 41)
 
 // ==========================================================================
 // Primary styles
@@ -27,16 +47,16 @@ body
 // ===================
 
 #header-container
-	border-bottom: 6px solid rgb(241, 101, 41)
+	border-bottom: 6px solid $highlightcolor
 	margin-bottom: 6px
 
 #last-container
-	border-top: 6px solid rgb(241, 101, 41)
+	border-top: 6px solid $highlightcolor
 	margin-top: 6px
 
 #main article aside
-	border-top:  2px solid rgba(241, 101, 41, .7)
-	border-bottom:  2px solid rgba(241, 101, 41, .7)
+	border-top:  2px solid $highlightcolor
+	border-bottom:  2px solid $highlightcolor
 
 #teaser-container,
 #footer-container
@@ -65,17 +85,17 @@ body
 	
 #title strong,
 #title small
-	color: rgba(241, 101, 41, 1)
+	color: $highlightcolor
 	
 #title small
 	font-size: .8em
 
 ::-moz-selection
-	background: #f16529
+	background: $highlightcolor
 	color: #fff
 	text-shadow: none
 ::selection
-	background: #f16529
+	background: $highlightcolor
 	color: #fff
 	text-shadow: none
 
@@ -130,7 +150,7 @@ nav a:hover
 	margin: 10px 10px 0px 10px
 
 #main article figure figcaption
-	padding: 0 10px 10px 10px
+	padding: 10px
 	font-size: .8em
 	line-height: .8em
 
@@ -146,7 +166,7 @@ nav a:hover
 	text-decoration: none
 	background-color: rgba(0,0,0,.1)
 	border-radius: 10px
-	color: rgb(241, 101, 41)
+	color: $highlightcolor
 
 #main section .more a:hover
 	text-shadow: black 1px 1px 0px
@@ -160,7 +180,7 @@ nav a:hover
 	line-height: 1.4em
 
 #teaser-container header #contactme
-	color: rgb(241, 101, 41)
+	color: $highlightcolor
 
 
 // ===============
@@ -274,9 +294,7 @@ nav a:hover
 	// ====================
 
 	#main article aside
-		-webkit-box-shadow: 0 5px 10px #aaa
-		-moz-box-shadow: 0 5px 10px #aaa
-		box-shadow: 0 5px 10px #aaa
+		@include box-shadow(0, 5px, 10px, #aaa)
 
 	// ============
 	// WIDE: Menu
@@ -300,7 +318,8 @@ nav a:hover
 	nav a:visited
 		text-decoration: none
 		background: none
-		color: black
+		border-radius: 10px
+		color: rgba(0,0,0,1)
 		float: left
 		width: 110px
 		margin: 0 0 0 10px
@@ -310,9 +329,11 @@ nav a:hover
 	nav a:hover
 		text-decoration: none
 		background-color: rgba(0,0,0,.1)
-		border-radius: 10px
-		color: rgb(241, 101, 41)
-		text-shadow: black 1px 1px 0px
+		color: $highlightcolor
+		text-shadow: rgba(0,0,0,1) 1px 1px 0px
+		
+	nav a
+		@include transition(background-color, 1s)
 
 	// ============
 	// WIDE: Main
@@ -335,6 +356,7 @@ nav a:hover
 	#main article figure
 		float: right
 		margin-right: 50px
+		margin-top: -50px
 		box-shadow: rgba(0,0,0,.2) 2px 2px 5px
 		@include transform(rotate(4deg))
 
