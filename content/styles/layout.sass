@@ -54,9 +54,6 @@ body
 	border-top: 6px solid $highlightcolor
 	margin-top: 6px
 
-#main article aside
-	border-top:  2px solid $highlightcolor
-	border-bottom:  2px solid $highlightcolor
 
 #teaser-container,
 #footer-container
@@ -67,28 +64,26 @@ body
 	position: relative
 
 
-#main article aside
-	background-color: #fff
-	background-image: url(../images/white_plaster.png)
-
-#header-container header #title a
-	text-decoration: none
-	color: black
+#main
+	article aside
+		border-top:  2px solid $highlightcolor
+		border-bottom:  2px solid $highlightcolor
+		background-color: #fff
+		background-image: url(../images/white_plaster.png)
 
 #title
-	color: black
-
-#title strong,
-#title span 
-	font-size: 1.5em
-	line-height: 1.5em
-	
-#title strong,
-#title small
-	color: $highlightcolor
-	
-#title small
-	font-size: .8em
+	a
+		text-decoration: none
+		color: black
+	strong,
+	span 
+		font-size: 1.5em
+		line-height: 1.5em
+	strong,
+	small
+		color: $highlightcolor
+	small
+		font-size: .8em
 
 ::-moz-selection
 	background: $highlightcolor
@@ -103,23 +98,31 @@ body
 // MOBILE: Menu
 // ==============
 
-nav a
-	display: inline
-	float: left
-	margin-bottom: 8px
-	margin-right: 8px
-	padding: 2px
-	color: black
-	text-align: center
-	text-decoration: none
-	font-weight: bold
+header 
+	nav a
+		display: inline
+		float: left
+		margin-bottom: 8px
+		margin-right: 8px
+		padding: 2px
+		color: black
+		text-align: center
+		text-decoration: none
+		font-weight: bold
 
-nav a:hover, nav a:visited
-	color: black
+	nav a:hover, nav a:visited
+		color: black
 
-nav a:hover
-	text-decoration: underline
+	nav a:hover
+		text-decoration: underline
 
+footer nav 
+	a, a:visited
+		color: white
+		text-decoration: none
+	a:hover
+		color: $highlightcolor
+		
 // ==============
 // MOBILE: Main
 // ==============
@@ -127,49 +130,50 @@ nav a:hover
 #main
 	padding: 30px 0
 
-#main article h1
-	font-size: 1.5em
-	line-height: 1.5em
+	article 
+		h1
+			font-size: 1.5em
+			line-height: 1.5em
 	
-#main article h2
-	font-size: 1.4em
-	line-height: 1.4em
+		h2
+			font-size: 1.4em
+			line-height: 1.4em
 	
-#main article aside
-	color: #000
-	padding: 0px 5% 10px
+		aside
+			color: #000
+			padding: 0px 5% 10px
 
-#main article figure
-	margin: 10px auto
-	width: 200px
-	border: 1px solid rgba(0,0,0,.2)
-	background-color: #fff
+		figure
+			margin: 10px auto
+			width: 200px
+			border: 1px solid rgba(0,0,0,.2)
+			background-color: #fff
 
-#main article figure img 
-	width: 180px
-	margin: 10px 10px 0px 10px
+		figure img 
+			width: 180px
+			margin: 10px 10px 0px 10px
 
-#main article figure figcaption
-	padding: 10px
-	font-size: .8em
-	line-height: .8em
+		figure figcaption
+			padding: 10px
+			font-size: .8em
+			line-height: .8em
 
-#main article header p
-	font-weight: bold
+		header p
+			font-weight: bold
 
-#main article footer p
-	font-size: .8em
-	line-height: .8em
+		footer p
+			font-size: .8em
+			line-height: .8em
 
-#main section .more a
-	padding: 6px 10px
-	text-decoration: none
-	background-color: rgba(0,0,0,.1)
-	border-radius: 10px
-	color: $highlightcolor
+	section .more a
+		padding: 6px 10px
+		text-decoration: none
+		background-color: rgba(0,0,0,.1)
+		border-radius: 10px
+		color: $highlightcolor
 
-#main section .more a:hover
-	text-shadow: black 1px 1px 0px
+	section .more a:hover
+		text-shadow: black 1px 1px 0px
 
 
 #teaser-container header,
@@ -259,33 +263,32 @@ nav a:hover
 	// INTERMEDIATE: Menu
 	// ====================
 	
-	nav a
-		float: left
-		width: 18%
-		margin: 0 2%
-		padding: 2px 2%
-		margin-bottom: 0
+	header 
+		nav a
+			float: left
+			width: 18%
+			margin: 0 2%
+			padding: 2px 2%
+			margin-bottom: 0
 	
-	nav li:first-child a
-		margin-left: 0
-	nav li:last-child  a
-		margin-right: 0
+		nav li:first-child a
+			margin-left: 0
+		nav li:last-child  a
+			margin-right: 0
 	
-	// ========================
-	// INTERMEDIATE: IE Fixes
-	// ========================
+		// ========================
+		// INTERMEDIATE: IE Fixes
+		// ========================
 
-	nav ul li
-		display: inline
+		nav ul li
+			display: inline
 
 	.oldie nav a
 		margin: 0 0.7%
 
-	#teaser-container header,
-	#footer-container footer
+	#teaser-container header
 		font-size: 1.2em
 		line-height: 1.5em
-
 
 @media only screen and (min-width: 850px)
 
@@ -305,63 +308,65 @@ nav a:hover
 		font-size: 1.5em
 		padding: 15px 0px
 
-	#title small
-		font-size: .8em
+		small
+			font-size: .8em
 
-	nav
-		position: absolute
-		top: 0px
-		right: 0px
-		width: 470px
+	header 
+		nav
+			position: absolute
+			top: 0px
+			right: 0px
+			width: 470px
 
-	nav a,
-	nav a:visited
-		text-decoration: none
-		background: none
-		border-radius: 10px
-		color: rgba(0,0,0,1)
-		float: left
-		width: 110px
-		margin: 0 0 0 10px
-		padding: 2px 0
-		margin-top: 23px
+		nav a,
+		nav a:visited
+			text-decoration: none
+			background: none
+			border-radius: 10px
+			color: rgba(0,0,0,1)
+			float: left
+			width: 110px
+			margin: 0 0 0 10px
+			padding: 2px 0
+			margin-top: 23px
 
-	nav a:hover
-		text-decoration: none
-		background-color: rgba(0,0,0,.1)
-		color: $highlightcolor
-		text-shadow: rgba(0,0,0,1) 1px 1px 0px
+		nav a:hover
+			text-decoration: none
+			background-color: rgba(0,0,0,.1)
+			color: $highlightcolor
+			text-shadow: rgba(0,0,0,1) 1px 1px 0px
 		
-	nav a
-		@include transition(background-color, 1s)
+		nav a
+			@include transition(background-color, 1s)
 
 	// ============
 	// WIDE: Main
 	// ============
 
-	#main article header,
-	#main article section,
-	#main article footer
-		float: left
-		width: 57%
+	#main 
+		article 
+			header,
+			section,
+			footer
+				float: left
+				width: 57%
 	
-	#main article section.full
-		width: 100%
+			section.full
+				width: 100%
 		
-	#main article aside
-		float: right
-		width: 28%
-		margin-bottom: 26px
+			aside
+				float: right
+				width: 28%
+				margin-bottom: 26px
 
-	#main article figure
-		float: right
-		margin-right: 50px
-		margin-top: -50px
-		box-shadow: rgba(0,0,0,.2) 2px 2px 5px
-		@include transform(rotate(4deg))
+			figure
+				float: right
+				margin-right: 50px
+				margin-top: -50px
+				box-shadow: rgba(0,0,0,.2) 2px 2px 5px
+				@include transform(rotate(4deg))
 
-	#teaser-container header,
-	#footer-container footer
+	#teaser-container header
 		font-size: 1.4em
 		line-height: 1.5em
 
