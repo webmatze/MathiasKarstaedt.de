@@ -9,21 +9,33 @@ This is my personal portfolio site (http://mathiaskarstaedt.de) using nanoc and 
 Installation
 ------------
 
-1. install nanoc
+1. clone Git repository
+
+    git clone git@github.com:webmatze/MathiasKarstaedt.de.git
     
-	gem install nanoc
+2. open directory (if using RVM accept .rvmrc)
+
+    cd MathiasKarstaedt.de
+    
+3. install bundler (if not already done)
+
+    gem install bundler
+    
+4. install all needed gems with bundler
+    
+    bundle install
 	
-2. compile code
+5. compile code
     
-	nanoc compile
+    nanoc compile
 	
-3. run webserver
+6. run webserver
     
-	nanoc view
+    nanoc view
 	
-4. open in webbrowser
+7. open in web browser
     
-	open http://localhost:3000
+    open http://localhost:3000
 	
 Sources
 -------
