@@ -45,7 +45,7 @@ body
 // ===================
 // ALL: Orange Theme
 // ===================
-
+		
 #header-container
 	border-bottom: 6px solid $highlightcolor
 	margin-bottom: 6px
@@ -84,6 +84,13 @@ body
 	small
 		font-size: .8em
 
+#contactform
+	ol
+		list-style: none outside none
+	input.text,
+	textarea
+		width: 100%
+		
 ::-moz-selection
 	background: $highlightcolor
 	color: #fff
@@ -189,6 +196,18 @@ footer
 
 #teaser-container header #contactme
 	color: $highlightcolor
+
+#main.wrapper article section
+	.error-message
+		color: red
+		border: 1px solid red
+		background-color: rgba(255,0,0,.2)
+		padding: 10px
+		h2
+			font-size: 1em
+			font-weight: bold
+			line-height: 1.5em
+			margin: 0
 
 
 // ===============

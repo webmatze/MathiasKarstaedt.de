@@ -2,4 +2,79 @@
 title: Kontakt
 ---
 
-Hi, I'm a new item!
+%article
+	%header
+		%h1 Arbeiten Sie mit mir
+		%p Damit Sie Ihr gewünschtes Ergbnis erhalten, muss ich Ihre Anforderungen verstehen.
+		%p Aus diesem Grund habe ich das folgende Formular erarbeitet, welches Ihnen helfen soll, Ihre Wünsche und Vorstellungen schneller übermitteln zu können.
+	%aside
+		%h3 Andere Kontaktmöglichkeiten
+		%p Sie haben Probleme das Formular auszufüllen, bzw. abzuschicken?
+		%p
+			Senden Sie mir statt dessen Ihre Daten und Projektdetails per Email:
+			%br
+			%a(href="mailto:mathias.karstaedt@gmail.com") mathias.karstaedt@gmail.com
+		%p 
+			Sie möchten lieber gleich telefonisch Kontakt mit mir aufnehmen? Ich stehe Ihnen jederzeit unter der folgenden Telefonnummer zur Verfügung:
+			%br
+			%strong +49 (0)40 67 30 90 98
+	%section
+		/ ERRORMESSAGE
+		%form#contactform{:action => "/contact.php", :method => "POST", :style => "display: block;"}
+			%input#message_type{:name => "message[message_type]", :type => "hidden", :value => "Anfrage"}
+			%fieldset
+				%h2 Persönliche Details
+				%ol
+					%li
+						%label{:for => "message_sender_name"} Ihr Name: (benötigt)
+						%input#message_sender_name.text{:name => "message_sender_name", :type => "text"}
+					%li
+						%label{:for => "message_sender_email"} Email-Adresse: (benötigt)
+						%input#message_sender_email.text{:name => "message_sender_email", :type => "text"}
+					%li
+						%label{:for => "message_body_phone"} Telefonnummer:
+						%input#message_body_phone.text{:name => "message_body_phone", :type => "text"}
+					%li
+						%label{:for => "message_body_location"} Standort:
+						%input#message_body_location.text{:name => "message_body_location", :type => "text"}
+			%fieldset
+				%h2 Firmen Details
+				%ol
+					%li
+						%label{:for => "message_body_company_name"} Name Ihrer Firma:
+						%input#message_body_company_name.text{:name => "message_body_company_name", :type => "text"}
+					%li
+						%label{:for => "message_body_existing_website"} Bestehende Webseite: (wenn vorhanden)
+						%input#message_body_existing_website.text{:name => "message_body_existing_website", :type => "text"}
+					%li
+						%label{:for => "message_body_business"} Was macht ihre Firma?
+						%textarea#message_body_business.mini{:name => "message_body_business"}
+			%fieldset
+				%h2 Projektbeschreibung
+				%ol
+					%li
+						%label{:for => "message_body_project_nature"}
+						Bitte beschreiben Sie kurz in ihren eigenen Worten die Art des Projektes!
+						%br (z.B. "Webdesign" oder "Anwendungsentwicklung")
+						%input#message_body_project_nature.text{:name => "message_body_project_nature", :type => "text"}
+					%li
+						%label{:for => "message_body_project_concept"} Beschreiben Sie das Konzept/Produkt/Service?
+						%textarea#message_body_project_concept.mini{:name => "message_body_project_concept"}
+					%li
+						%label{:for => "message_body_project_content"} Welche speziellen Inhalte bzw. Funktionalitäten soll ihre Seite bereitstellen?
+						%textarea#message_body_project_content.mini{:name => "message_body_project_content"}
+					%li
+						%label{:for => "message_body_project_deadlines"} Haben Sie bereits ein Startdatum, bzw. einen Endtermin für das Projekt? (z.B. Produktlaunch Datum)
+						%textarea#message_body_project_deadlines.mini{:name => "message_body_project_deadlines"}
+					%li
+						%label{:for => "message_body_project_budget"} Welches Budget steht für das Projekt zur Verfügung?
+						%textarea#message_body_project_budget.mini{:name => "message_body_project_budget"}
+					%li
+						%label{:for => "message_body_other_detail"} Gibt es weitere Informationen zum Projekt, welche ich unbedingt wissen sollte?
+						%textarea#message_body_other_detail.mini{:name => "message_body_other_detail"}
+					%li.submit-row
+						%input.submit{:type => "submit", :value => "Anfrage absenden"}
+	%footer
+		%small
+			Alle von Ihnen übersandten Informationen werden selbstverständlich streng vertraulich behandelt!
+
