@@ -23,22 +23,22 @@ title: Kontakt
 		%form#contactform{:action => "/contact.php", :method => "POST", :style => "display: block;"}
 			%input#message_type{:name => "message[message_type]", :type => "hidden", :value => "Anfrage"}
 			%fieldset
-				%h2 Persönliche Details
+				%legend Persönliche Details
 				%ol
 					%li
 						%label{:for => "message_sender_name"} Ihr Name: (benötigt)
-						%input#message_sender_name.text{:name => "message_sender_name", :type => "text"}
+						%input#message_sender_name.text{:name => "message_sender_name", :type => "text", :placeholder => "Ihr Vor- und Nachname", :required => "required", :autofocus => "autofocus"}
 					%li
 						%label{:for => "message_sender_email"} Email-Adresse: (benötigt)
-						%input#message_sender_email.text{:name => "message_sender_email", :type => "text"}
+						%input#message_sender_email.text{:name => "message_sender_email", :type => "email", :placeholder => "name@beispiel.de", :required => "required"}
 					%li
 						%label{:for => "message_body_phone"} Telefonnummer:
-						%input#message_body_phone.text{:name => "message_body_phone", :type => "text"}
+						%input#message_body_phone.text{:name => "message_body_phone", :type => "phone", :placeholder => "z.B. +49 (0)40 12 34 56 78"}
 					%li
 						%label{:for => "message_body_location"} Standort:
 						%input#message_body_location.text{:name => "message_body_location", :type => "text"}
 			%fieldset
-				%h2 Firmen Details
+				%legend Firmen Details
 				%ol
 					%li
 						%label{:for => "message_body_company_name"} Name Ihrer Firma:
@@ -50,7 +50,7 @@ title: Kontakt
 						%label{:for => "message_body_business"} Was macht ihre Firma?
 						%textarea#message_body_business.mini{:name => "message_body_business"}
 			%fieldset
-				%h2 Projektbeschreibung
+				%legend Projektbeschreibung
 				%ol
 					%li
 						%label{:for => "message_body_project_nature"}
