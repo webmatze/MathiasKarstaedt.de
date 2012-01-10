@@ -33,7 +33,7 @@ end
 
 compile '/pages/*/' do
   filter :haml
-  layout 'page'
+  layout 'home'
   layout 'default'
 end
 
