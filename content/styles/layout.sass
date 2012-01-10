@@ -13,6 +13,13 @@
 	-o-box-shadow: $xoff $yoff $blur $color
 	-ms-box-shadow: $xoff $yoff $blur $color
 	box-shadow: $xoff $yoff $blur $color
+
+@mixin text-shadow($xoff, $yoff, $blur, $color)
+	-webkit-text-shadow: $xoff $yoff $blur $color
+	-moz-text-shadow: $xoff $yoff $blur $color
+	-o-text-shadow: $xoff $yoff $blur $color
+	-ms-text-shadow: $xoff $yoff $blur $color
+	text-shadow: $xoff $yoff $blur $color
 	
 @mixin transition($property, $duration)
 	-webkit-transition-property: $property
@@ -59,6 +66,8 @@ body
 #footer-container
 	background-color: #3C3C3C
 	background-image: url(../images/darkdenim3.png)
+	@include box-shadow(inset rgba(0,0,0,0.5), 0, 4px, 4px)
+	@include text-shadow(rgba(0,0,0,0.5), 0, 4px, 4px)	
 
 #header-container header
 	position: relative
@@ -200,7 +209,7 @@ footer
 		color: $highlightcolor
 
 	section .more a:hover
-		text-shadow: black 1px 1px 0px
+		@include text-shadow(black, 1px, 1px, 0px)
 
 #teaser-container header,
 #footer-container footer
@@ -409,7 +418,7 @@ footer
 			text-decoration: none
 			background-color: rgba(0,0,0,.1)
 			color: $highlightcolor
-			text-shadow: rgba(0,0,0,1) 1px 1px 0px
+			@include text-shadow(rgba(0,0,0,1), 1px, 1px, 0px)
 		
 		nav a
 			@include transition(background-color, 1s)
