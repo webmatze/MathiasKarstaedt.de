@@ -211,6 +211,7 @@ footer
 			margin: 0
 			width: 100%
 			@include transform(rotate(0deg))
+			@include box-shadow(transparent, 0, 0, 0)
 			float: none
 			margin-bottom: 15px
 			img
@@ -485,7 +486,7 @@ footer
 				float: right
 				margin-right: 50px
 				margin-top: -50px
-				box-shadow: rgba(0,0,0,.2) 2px 2px 5px
+				@include box-shadow(rgba(0,0,0,.2), 2px, 2px, 5px)
 				@include transform(rotate(4deg))
 
 	#teaser-container header
