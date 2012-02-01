@@ -19,8 +19,12 @@ require 'sass'
 compile '/contact/' do 
 end
 
-compile '/styles/*/' do
+compile '/styles/style.sass/' do
   filter :sass
+end
+
+compile '/styles/*/' do
+  # don't filter or layout
 end
 
 compile '/js/*/' do
@@ -51,7 +55,7 @@ route '/contact/' do
 	item.identifier.chop + '.' + item[:extension]
 end
 
-route '/styles/*/' do
+route '/styles/style.sass/' do
   item.identifier.chop + '.css'
 end
 
