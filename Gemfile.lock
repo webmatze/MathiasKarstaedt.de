@@ -3,16 +3,24 @@ GEM
   specs:
     adsf (1.0.1)
       rack (>= 1.0.0)
-    cri (2.0.2)
+    colored (1.2)
+    concurrent-ruby (1.0.5)
+    cri (2.9.1)
+      colored (~> 1.2)
+    ddplugin (1.0.1)
     haml (3.1.4)
+    hamster (3.0.0)
+      concurrent-ruby (~> 1.0)
     kramdown (0.13.4)
     mime-types (1.17.2)
-    nanoc (3.2.3)
-      nanoc3 (>= 3.2.3)
-    nanoc3 (3.2.3)
-      cri (~> 2.0)
+    nanoc (4.7.13)
+      cri (~> 2.8)
+      ddplugin (~> 1.0)
+      hamster (~> 3.0)
+      ref (~> 2.0)
     rack (1.4.0)
-    sass (3.1.12)
+    ref (2.0.0)
+    sass (3.4.24)
 
 PLATFORMS
   ruby
@@ -24,3 +32,6 @@ DEPENDENCIES
   mime-types
   nanoc
   sass
+
+BUNDLED WITH
+   1.14.6

@@ -27,11 +27,11 @@ Installation
 	
 5. compile code
     
-    nanoc compile
+    bin/nanoc compile
 	
 6. run webserver
     
-    nanoc view
+    bin/nanoc view
 	
 7. open in web browser
     
@@ -46,4 +46,4 @@ This project also uses code of the responsive-template by verika (http://verekia
 Copyright 
 ---------
 
-2012 by Mathias Karstädt
+2012-2017 by Mathias Karstädt
