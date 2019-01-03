@@ -18,7 +18,7 @@ GEM
       ddplugin (~> 1.0)
       hamster (~> 3.0)
       ref (~> 2.0)
-    rack (1.4.0)
+    rack (2.0.6)
     ref (2.0.0)
     sass (3.4.24)
 
@@ -31,6 +31,7 @@ DEPENDENCIES
   kramdown
   mime-types
   nanoc
+  rack (>= 1.6.11)
   sass
 
 BUNDLED WITH
